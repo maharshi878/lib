@@ -6099,7 +6099,7 @@
    }
    
    #w-node-fc96ea8e-4426-4b59-9502-3d871703c558-5f94a990 {
-     -ms-grid-column-span: 1;
+     -ms-grid-column-span: 1;/*title*/
      grid-column-end: 2;
      -ms-grid-column: 1;
      grid-column-start: 1;
@@ -6108,18 +6108,29 @@
      -ms-grid-row: 1;
      grid-row-start: 1;
    }
-   
+
    #w-node-ed04bc34-1914-d83e-4fe9-ed2110944945-5f94a990 {
-     -ms-grid-column-span: 1;
-     grid-column-end: 3;
+     -ms-grid-column-span: 1;/*text*/
+     grid-column-end: 1;
      -ms-grid-column: 2;
      grid-column-start: 2;
      -ms-grid-row-span: 3;
      grid-row-end: 4;
      -ms-grid-row: 1;
-     grid-row-start: 1;
+     grid-row-start: 2;
    }
-   
+
+    #w-node-2010{
+    -ms-grid-column-span: 1;
+     grid-column-end: 1;
+     -ms-grid-column: 2;
+     grid-column-start: 2;
+     -ms-grid-row-span: 2;
+     grid-row-end: 6;
+     -ms-grid-row: 5;
+     grid-row-start: 4;
+   }
+
    #w-node-fc96ea8e-4426-4b59-9502-3d871703c56a-5f94a990 {
      -ms-grid-column-span: 1;
      grid-column-end: 3;
@@ -6141,7 +6152,36 @@
      -ms-grid-row: 6;
      grid-row-start: 6;
    }
-   
+   #w-node-02-11-10 {
+    -ms-grid-column-span: 1;
+    grid-column-end: 3;
+    -ms-grid-column: 2;
+    grid-column-start: 1;
+    -ms-grid-row-span: 3;
+    grid-row-end: 9;
+    -ms-grid-row: 6;
+    grid-row-start: 6;
+  }
+  #w-node-1972 {
+    -ms-grid-column-span: 1;
+    grid-column-end: 3;
+    -ms-grid-column: 2;
+    grid-column-start: 1;
+    -ms-grid-row-span: 3;
+    grid-row-end: 9;
+    -ms-grid-row: 6;
+    grid-row-start: 9;
+  }
+  #w-node-tiplo {
+    -ms-grid-column-span: 1;
+    grid-column-end: 3;
+    -ms-grid-column: 2;
+    grid-column-start: 1;
+    -ms-grid-row-span: 3;
+    grid-row-end: 12;
+    -ms-grid-row: 6;
+    grid-row-start: 11;
+  }
    #w-node-_5d3e0606-497d-d236-05de-6708a808b266-5f94a990 {
      -ms-grid-column-span: 1;
      grid-column-end: 3;
@@ -8184,7 +8224,7 @@
    }
    @font-face {
     font-family: 'Ahganirya';
-    src: url('https://mve.co.in/Ahganirya-PersonalUse.woff2') format('woff2');
+    src: url('Ahganirya-PersonalUse.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
