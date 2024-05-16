@@ -12,7 +12,8 @@
    /* ==========================================================================
       Start of custom Webflow CSS
       ========================================================================== */
-   .w-layout-grid {
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+      .w-layout-grid {
      display: -ms-grid;
      display: grid;
      grid-auto-columns: 1fr;
@@ -54,7 +55,17 @@
      letter-spacing: -0.01em;
      text-transform: uppercase;
    }
-   
+   .display-font-h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Gtwalsheimpro, sans-serif;
+    color: #000;
+    font-size: 7vw;
+    line-height: 0.96em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
    .display-font.align-right {
      text-align: right;
    }
@@ -62,8 +73,8 @@
    .h1 {
      margin-top: 0px;
      margin-bottom: 0px;
-     font-family: Gtwalsheimpro, sans-serif;
-     font-size: 9.7em;
+     font-family: 'Playfair Display', sans-serif;
+     font-size: 7em;
      line-height: 0.99em;
      font-weight: 400;
      letter-spacing: -0.01em;
@@ -74,8 +85,8 @@
      margin-top: 0px;
      margin-bottom: 0px;
      font-family: 'Ahganirya', sans-serif;
-     font-size: 5.6em;
-     line-height: 0.85em;
+     font-size: 3.5em;
+     line-height: 2em;
      font-weight: 400;
      letter-spacing: 0.01em;
    }
@@ -168,8 +179,8 @@
      margin-top: 0px;
      margin-bottom: 0px;
      font-family: 'Ahganirya', sans-serif;
-     font-size: 2em;
-     line-height: 1em;
+     font-size: 1.4em;
+     line-height: 1.7em;
      font-weight: 400;
      letter-spacing: 0.01em;
    }
@@ -502,9 +513,20 @@
      min-width: 14.29vh;
      margin-left: 0vh;
    }
-   
+   @keyframes drop{
+    0%{opacity: 100}
+    30%{transform: translatey(-50px)}
+    50%{transform: translateY(10px)}
+    60%{transform: translateY(-70px)}
+    70%{transform: translateY(-20px)}
+    100%{opacity: 0;}
+  }
    .hero-bg-img-container {
+     animation: drop 3s;
+     zoom: 1;
      position: absolute;
+     opacity:0;
+     object-fit: fill;
      left: auto;
      top: 0%;
      right: 0%;
@@ -576,7 +598,6 @@
      width: 178vh;
      height: 100%;
      min-width: 178vh;
-     background-color: #00c;
    }
    
    .pag-list {
@@ -599,11 +620,11 @@
      top: 0%;
      right: 0%;
      bottom: 0%;
-     width: 142vh;
      height: 100%;
      max-width: none;
      min-height: 100%;
-     min-width: 142vh;
+     min-width: 170vh;
+     object-fit: cover;
    }
    
    .head-section {
@@ -955,8 +976,7 @@
      overflow: hidden;
      height: 100%;
      min-width: 142vh;
-     background-color: #00c;
-   }
+    }
    
    .head-img-section.left-minus-margin {
      z-index: -1;
@@ -965,11 +985,11 @@
    
    .s-bg-img-2 {
      position: absolute;
+     object-fit: cover !important;
      left: -5.3vh;
      top: 0%;
      right: auto;
      bottom: 0%;
-     width: 153.4vh;
      height: 100%;
      min-height: 100%;
      min-width: 153.4vh;
@@ -1279,11 +1299,9 @@
    .sect-9-logo {
      position: relative;
      z-index: 1;
-     width: 54.43vh;
-     height: 24vh;
+     width: 50vw;
+     height: 50vh;
      max-width: none;
-     min-height: 24vh;
-     min-width: 54.43vh;
      -o-object-fit: contain;
      object-fit: contain;
    }
@@ -4484,7 +4502,6 @@
      display: -ms-flexbox;
      display: flex;
      overflow: hidden;
-     width: 36.857142857142854vh;
      -webkit-box-pack: center;
      -webkit-justify-content: center;
      -ms-flex-pack: center;
@@ -5256,7 +5273,6 @@
      overflow: hidden;
      height: 100%;
      min-width: 130vh;
-     background-color: #00c;
    }
    
    .head-img-section-2.left-minus-margin {
@@ -5611,7 +5627,16 @@
      -ms-grid-row: 2;
      grid-row-start: 2;
    }
-   
+   #w-node-tipli{
+    -ms-grid-column-span: 1;
+    grid-column-end: 1;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-row-span: 7;
+    grid-row-end: 9;
+    -ms-grid-row: 4;
+    grid-row-start: 4;
+   }
    #w-node-_702cea01-1df0-6813-7086-7b0d3982ef50-5f94a990 {
      -ms-grid-column-span: 1;
      grid-column-end: 2;
@@ -5798,7 +5823,80 @@
      -ms-grid-row: 9;
      grid-row-start: 9;
    }
-   
+   .slideshow {
+    list-style-type: none;
+  }
+  
+  /** SLIDESHOW **/
+  .slideshow,
+  .slideshow:after { 
+      top: -16px; /*Not sure why I needed this fix*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      z-index: 0; 
+  }
+  
+  .slideshow li .slideshowSpan { 
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      color: transparent;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      opacity: 0;
+      z-index: 0;
+      animation: imageAnimation 30s linear infinite 0s; 
+  }
+  
+  
+  
+  .slideshow li:nth-child(1) span { 
+      background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg"); 
+  }
+  .slideshow li:nth-child(2) span { 
+      background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9ecd82b40364fc97f4b_bridge.jpg");
+      animation-delay: 6s; 
+  }
+  .slideshow li:nth-child(3) span { 
+      background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+      animation-delay: 12s; 
+  }
+  .slideshow li:nth-child(4) span { 
+      background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5bfa14d04ae3429879830ee4_home-hero.jpg");   
+      animation-delay: 18s; 
+  }
+  .slideshow li:nth-child(5) span { 
+      background-image: url("https://uploads-ssl.webflow.com/5976a3655fcd654cb3d604ca/5c00c9963ea913260bb41b0e_powerlines.jpg");
+      animation-delay: 24s; 
+  }
+  
+  
+  
+  @keyframes imageAnimation { 
+      0% { opacity: 0; animation-timing-function: ease-in; }
+      8% { opacity: 1; animation-timing-function: ease-out; }
+      17% { opacity: 1 }
+      25% { opacity: 0 }
+      100% { opacity: 0 }
+  }
+  
+  
+  @keyframes titleAnimation { 
+      0% { opacity: 0 }
+      8% { opacity: 1 }
+      17% { opacity: 1 }
+      19% { opacity: 0 }
+      100% { opacity: 0 }
+  }
+  
+  
+  .no-cssanimations .cb-slideshow li span {
+    opacity: 1;
+  }
    #w-node-cad34037-dfd7-b3db-fd88-35882cde5478-5f94a990 {
      -ms-grid-column-span: 1;
      grid-column-end: 2;
@@ -6299,8 +6397,8 @@
      grid-column-start: 1;
      -ms-grid-row-span: 2;
      grid-row-end: 10;
-     -ms-grid-row: 8;
-     grid-row-start: 8;
+     -ms-grid-row: 9;
+     grid-row-start: 9;
    }
    
    #w-node-bbb36823-9427-efa5-400e-784e58bf5778-5f94a990 {
@@ -6464,8 +6562,8 @@
      grid-column-start: 1;
      -ms-grid-row-span: 2;
      grid-row-end: 10;
-     -ms-grid-row: 8;
-     grid-row-start: 8;
+     -ms-grid-row: 9;
+     grid-row-start: 9;
    }
    
    #w-node-_435b4eb7-a4c5-13b9-3bc7-2b2d01f09aca-5f94a990 {
